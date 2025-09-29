@@ -42,16 +42,39 @@ function initLinks() {
 function initTheme() {
   const key = "pref-theme";
   const saved = localStorage.getItem(key);
-  if (saved) document.documentElement.setAttribute("data-theme", saved);
-  const btn = document.getElementById("theme-toggle");
-  if (!btn) return;
-  btn.addEventListener("click", () => {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "light" ? "dark" : "light";
-    if (next === "dark") document.documentElement.removeAttribute("data-theme");
-    else document.documentElement.setAttribute("data-theme", "light");
+  // default dark when not set; when set to "light" we add data-theme="light"
+  if (saved === "light") document.documentElement.setAttribute("data-theme", "light");
+  else document.documentElement.removeAttribute("data-theme");
+
+  const apply = (next) => {
+    if (next === "light") {
+      document.documentElement.setAttribute("data-theme", "light");
+    } else {
+      document.documentElement.removeAttribute("data-theme");
+    }
     localStorage.setItem(key, next);
+    syncThemeButtons(next);
+  };
+
+  const btns = [
+    document.getElementById("theme-toggle"),
+    document.getElementById("theme-toggle-mobile"),
+  ].filter(Boolean);
+  btns.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const isLight = document.documentElement.getAttribute("data-theme") === "light";
+      apply(isLight ? "dark" : "light");
+    });
   });
+  syncThemeButtons(saved === "light" ? "light" : "dark");
+}
+
+function syncThemeButtons(mode) {
+  const icon = mode === "light" ? "🌞" : "🌙";
+  const btn = document.getElementById("theme-toggle");
+  const btnM = document.getElementById("theme-toggle-mobile");
+  if (btn) btn.textContent = icon;
+  if (btnM) btnM.textContent = icon;
 }
 
 function enableSmoothScroll() {

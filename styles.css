@@ -170,5 +170,6 @@ body {
 
 /* Default hidden for mobile-only on desktop */
 .mobile-only { display: none; }
+.mobile-fab { position: fixed; right: 16px; bottom: 16px; z-index: 20; }
 
 
