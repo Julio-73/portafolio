@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portafolio profesional minimalista">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Portafolio · Julio Cesar Quispe Garrido">
+  <meta property="og:description" content="Ingeniero de software con IA. Proyectos, experiencia y contacto.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'%3E%3Crect width='1200' height='630' fill='%230b0c0f'/%3E%3Ctext x='600' y='360' font-size='140' text-anchor='middle' fill='%23ffffff' font-family='Inter,Segoe UI,Arial' font-weight='700'%3EJulio Q.%3C/text%3E%3C/svg%3E">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Portafolio · Julio Cesar Quispe Garrido</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000'/%3E%3Ctext x='50' y='62' font-size='54' text-anchor='middle' fill='%23fff' font-family='Inter,Segoe UI,Arial' font-weight='700'%3EJQ%3C/text%3E%3C/svg%3E">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Julio Cesar Quispe Garrido",
+    "jobTitle": "Ingeniero de software con IA",
+    "url": "",
+    "image": "https://github.com/Julio-73.png?size=320",
+    "sameAs": [
+      "https://github.com/Julio-73"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header container">
+    <a class="brand" href="#home" aria-label="Ir a inicio">
+      <span class="logo" aria-hidden="true">▣</span>
+      <span class="brand-text">Julio Cesar Quispe Garrido</span>
+    </a>
+    <button id="menu-toggle" class="btn-ghost mobile-only" aria-expanded="false" aria-controls="site-menu" aria-label="Abrir menú">☰</button>
+    <nav id="site-menu" class="site-nav" aria-label="Principal">
+      <a href="#proyectos">Proyectos</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+      <button id="theme-toggle" class="btn-ghost" aria-label="Cambiar tema" title="Cambiar tema">🌙</button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-text reveal">
+        <img id="avatar" class="avatar reveal" src="https://github.com/Julio-73.png?size=320" alt="Foto de Julio Cesar Quispe Garrido" width="160" height="160" referrerpolicy="no-referrer" />
+        <h1>Construyo experiencias web minimalistas y hermosas</h1>
+        <p>Ingeniero de software con IA · JavaScript · React · Node</p>
+        <div class="hero-cta">
+          <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+          <a href="#contacto" class="btn-secondary">Contactar</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+    </section>
+
+    <section id="proyectos" class="container section">
+      <div class="section-head reveal">
+        <h2>Proyectos</h2>
+        <p class="muted">Repositorios destacados desde GitHub</p>
+      </div>
+      <div class="tools reveal" role="region" aria-label="Herramientas de proyectos">
+        <input id="search-input" class="input" type="search" placeholder="Buscar por nombre o descripción" aria-label="Buscar proyectos" />
+        <div id="language-chips" class="chips" aria-label="Filtrar por lenguaje"></div>
+      </div>
+      <div id="projects-grid" class="grid"></div>
+      <div id="projects-empty" class="empty muted" hidden aria-live="polite">No se encontraron proyectos.</div>
+    </section>
+
+    <section id="sobre-mi" class="container section">
+      <div class="section-head reveal">
+        <h2>Sobre mí</h2>
+      </div>
+      <div class="about reveal">
+        <p>
+          Soy un/a desarrollador/a apasionado/a por crear productos digitales con foco en
+          simplicidad, accesibilidad y rendimiento. Me encanta colaborar con equipos para
+          convertir ideas en interfaces claras y efectivas.
+        </p>
+        <ul class="tags">
+          <li>JavaScript</li>
+          <li>TypeScript</li>
+          <li>React</li>
+          <li>Node</li>
+          <li>UI/UX</li>
+          <li>CSS</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="contacto" class="container section">
+      <div class="section-head reveal">
+        <h2>Contacto</h2>
+        <p class="muted">¿Tienes un proyecto en mente? Hablemos.</p>
+      </div>
+      <div class="contact reveal">
+        <a id="contact-email" class="btn-primary" href="mailto:tu.email@ejemplo.com">Escríbeme</a>
+        <div class="socials">
+          <a id="link-github" class="social" href="https://github.com/tu-usuario" target="_blank" rel="noreferrer noopener" aria-label="GitHub">GitHub</a>
+          <a id="link-linkedin" class="social" href="https://www.linkedin.com/in/tu-perfil" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn">LinkedIn</a>
+          <a id="link-x" class="social" href="https://x.com/" target="_blank" rel="noreferrer noopener" aria-label="X">X</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span class="muted">© <span id="year"></span> Julio Cesar Quispe Garrido · Hecho con amor y café</span>
+  </footer>
+
+  <script src="./script.js" defer></script>
+</body>
+</html>
+
+
